@@ -71,12 +71,6 @@ We welcome contributions to improve the website. Please follow these steps to co
 ## License
 This project is licensed under the MIT License. Feel free to use, modify, and distribute the code.
 
-## Contact
-For any inquiries or support, reach out to us:
-- **Email**: support@marsmetatech.com
-- **Phone**: +91-XXXXXXXXXX
-- **WhatsApp**: [Click to Chat](https://wa.me/7985946687)
-- **Address**: MarsMeta Tech, Nai Bazar, Jungle Rasoolpur No. 2, 273203, Uttar Pradesh, India.
 
 ---
 
