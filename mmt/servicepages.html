@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Automation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            box-sizing: border-box;
+        }
+        /* Header */
+        header {
+            background: #000;
+            color: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        header nav {
+            display: flex;
+        }
+        header nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px 50px;
+            background: #f4f4f4;
+            flex-wrap: wrap;
+        }
+        .hero-content {
+            max-width: 50%;
+            
+        }
+        .hi {
+            margin: 40px 0;
+            color: #e17000;
+            font-size: 70px;
+            font-family: Arial, sans-serif; 
+        }
+        .hero-content p {
+            color: #0c1a53;
+            font-size: 23px;
+            margin: 40px 0;
+            font-family: Arial, sans-serif; 
+        }
+        .btn {
+            padding: 15px 30px;
+            background: #2200e1;
+            color: #fff;
+            text-decoration: none;
+            margin-top: 50px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn:hover {
+    background: #d46000;
+    transform: scale(1.05);
+       }
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Info Section 
+        .info-section {
+            padding: 100px 50px;
+            text-align: center;
+        }
+        .info-section h2 {
+            color: #0c1a53;
+        } */
+         /* Overall Section Styling */
+.info-section {
+    padding: 80px 50px;
+    background: linear-gradient(120deg, #f4f4f4, #e6e9f0);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Title and Description Styling */
+.section-title {
+    font-size: 36px;
+    color: #0c1a53;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.section-desc {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Info Boxes Grid */
+.info-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Individual Info Box */
+.info-box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Styling */
+.info-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+/* Box Title */
+.info-box h3 {
+    font-size: 22px;
+    color: #0c1a53;
+    margin-bottom: 10px;
+}
+
+/* Box Description */
+.info-box p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 28px;
+    }
+
+    .section-desc {
+        font-size: 18px;
+    }
+}
+
+
+        /* Areas Section */
+        .areas-section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 5px;
+            margin-top: 5px;
+            
+        }
+        .area-box {
+            width: 22%;
+            margin: 20px 0;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .area-box img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .area-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(79, 45, 156, 0.102); 
+        }
+
+        .area-box a{
+            display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #004080;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.area-title {
+    text-align: center;
+    font-size: 36px; 
+    color: #0c1a53;  
+    margin-top: 50px;
+    font-weight: bold;
+    font-family: Arial, sans-serif; 
+}
+
+
+
+        .tiles-head {
+            color: #0c1a53;
+            font-size: 30px;
+        }
+        .tiles-desc {
+            color: #333;
+            font-size: 20px;
+        }
+
+        .faq-section {
+    padding: 50px;
+    background: #f4f4f4;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.faq-title {
+    font-size: 36px;
+    color: #0c1a53;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+    max-width: 100%; /* Ensure it takes up full width available */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 20px;
+    background-color: #e17000;
+    color: white;
+    border: none;
+    text-align: left;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+}
+
+.faq-question:hover {
+    background-color: #d46000;
+}
+
+.faq-answer {
+    padding: 20px;
+    background-color: #fff;
+    display: none;
+    border-left: 3px solid #e17000;
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .faq-section {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .faq-title {
+        font-size: 28px;
+    }
+
+    .faq-question {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .faq-answer {
+        font-size: 16px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-section {
+        width: 95%; /* Further adjustment for very small screens */
+    }
+
+    .faq-title {
+        font-size: 24px;
+    }
+
+    .faq-question {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .faq-answer {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+
+        /* Media Queries for Responsiveness */
+        /* Tablet (1024px and smaller) */
+        @media (max-width: 1024px) {
+            header nav {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-content, .hero-image {
+                max-width: 100%;
+                text-align: center;
+            }
+            .hero-image img {
+                width: 80%;
+                margin: 0 auto;
+            }
+            .hi {
+                font-size: 60px; /* Reduced font size for tablet */
+            }
+            .hero-content p {
+                font-size: 24px; /* Reduced paragraph size for tablet */
+            }
+        }
+
+        /* Mobile (768px and smaller) */
+        @media (max-width: 768px) {
+            header nav {
+                display: block;
+                text-align: center;
+                width: 100%;
+            }
+            header nav a {
+                margin: 10px 0;
+                display: block;
+            }
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-content, .hero-image {
+                max-width: 100%;
+            }
+            .hero-image img {
+                width: 100%;
+                height: auto;
+            }
+            .areas-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .areas-section .area-box {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+            /* Reduce text size further for mobile devices */
+            .hi {
+                font-size: 50px; /* Further reduced size for mobile */
+            }
+            .hero-content p {
+                font-size: 18px; /* Further reduced paragraph size for mobile */
+            }
+        }
+
+        /* Mobile (480px and smaller) */
+        @media (max-width: 480px) {
+            header nav {
+                display: block;
+                text-align: center;
+            }
+            header nav a {
+                margin: 10px 0;
+                display: block;
+            }
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-content h1 {
+                font-size: 40px; /* Further reduced heading size */
+            }
+            .hero-content p {
+                font-size: 16px; /* Further reduced paragraph size for mobile */
+            }
+            .areas-section .area-box {
+                width: 90%;
+            }
+        }
+        /* Footer Section Styling */
+.footer-section {
+    background-color: #0c1a53;
+    color: #fff;
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Footer Container */
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Footer Columns */
+.footer-container div {
+    padding: 10px;
+}
+
+/* Footer Headings */
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #f0a500;
+}
+
+/* About Text */
+.footer-about p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #dcdcdc;
+}
+
+/* Footer Links */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #dcdcdc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #f0a500;
+}
+
+/* Contact Info */
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-contact ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #dcdcdc;
+}
+
+/* Social Media Icons */
+.footer-social .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social .social-icons a {
+    color: #f0a500;
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #dcdcdc;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">MarsMetaTech</div>
+        <nav>
+            <a href="#">Services</a>
+            <a href="#">Industries</a>
+            <a href="#">Solutions</a>
+            <a href="#">About Us</a>
+        </nav>
+    </header>
+    <section class="hero-section" data-aos="fade-up">
+        <div class="hero-content">
+            <span class="hi">Personalized Digital Visiting Card</span>
+            <p>we are passionate about empowering businesses to grow and thrive in the digital age. Our digital visiting cards are designed to combine functionality with creativity, ensuring you stand out in a competitive market.</p>
+            <a href="#" class="btn">Know more</a>
+        </div>
+        <div class="hero-image">
+            <img src="hero-img.png" alt="Updated Automation Illustration">
+        </div>
+    </section>
+    <!--<section class="info-section" data-aos="fade-right">
+        <span class="tiles-head">Why You Need Intelligent Automation and a Digital Workforce</span>
+        <br>
+        <span class="tiles-desc">Routines can drain humans! But Digital Workers can handle repetitive and manual tasks without interruption, leveraging AI and machine learning.</span>
+    </section> -->
+    <section class="info-section" data-aos="fade-right">
+        <h2 class="section-title">Ready to Make an Impact?</h2>
+        <p class="section-desc">Create your personalized digital visiting card today and take your business to the next level!</p>
+        <div class="info-boxes">
+            <div class="info-box" data-aos="zoom-in">
+                <img src="img4.jpg" alt="AI Icon" class="info-icon">
+                <h3>Boost Productivity</h3>
+                <p>Automate routine tasks to allow your team to focus on innovation and strategy.</p>
+                
+            </div>
+            <div class="info-box" data-aos="zoom-in" data-aos-delay="100">
+                <img src="img3.jpg" alt="Efficiency Icon" class="info-icon">
+                <h3>Improve Efficiency</h3>
+                <p>Streamline workflows and reduce errors with intelligent automation.</p>
+             
+            </div>
+            <div class="info-box" data-aos="zoom-in" data-aos-delay="200">
+                <img src="img2.jpg" alt="Cost Icon" class="info-icon">
+                <h3>Cut Costs</h3>
+                <p>Save resources by automating repetitive, time-consuming processes.</p>
+                
+            </div>
+            <div class="info-box" data-aos="zoom-in" data-aos-delay="300">
+                <img src="img1.jpg" alt="Support Icon" class="info-icon">
+                <h3>24/7 Support</h3>
+                <p>Digital workers never tire and can provide uninterrupted service.</p>
+                
+            </div>
+        </div>
+    </section>
+    
+    <p class="area-title">Our Services</p>
+    <section class="areas-section">
+        
+        <div class="area-box" data-aos="zoom-in">
+            <img src="img1.jpg" alt="Updated Customer Service" loading="lazy">
+            <h3>Website Designing Services</h3>
+            <p>We are one of the top Web Design Company and we are committed to Provide best UI services. Our first goal is to create Pixel perfect HTML/CSS using PSD, Wireframe or any other template.</p>
+            <a href="#" class="btn">Learn more</a>
+        </div>
+        <div class="area-box" data-aos="zoom-in">
+            <img src="img2.jpg" alt="Updated Finance" loading="lazy">
+            <h3>Application Development</h3>
+            <p>If your company does not have a mobile app yet, we are here to develop your user friendly mobile applications with Creative & Unique App Design for your business.</p>
+            <a href="#" class="btn">Learn more</a>
+        </div>
+        <div class="area-box" data-aos="zoom-in">
+            <img src="img3.jpg" alt="Updated Human Resources" loading="lazy">
+            <h3>E-commerce Solutions</h3>
+            <p>If someone looking for develop a Magento store from scratch; this is the best platform to start.</p>
+            <a href="#" class="btn">Learn more</a>
+        </div>
+        <div class="area-box" data-aos="zoom-in">
+            <img src="img2.jpg" alt="Save time" loading="lazy">
+            <h3>ERP Solutions</h3>
+            <p>We have implemented bi-directional connector which is 100% compatible with the last OpenERP 9.0 and latest Magento versions (1.x).</p>
+            <a href="#" class="btn">Learn more</a>
+        </div>
+        <div class="area-box" data-aos="zoom-in">
+            <img src="img4.jpg" alt="Secure" loading="lazy">
+            <h3>Digital Marketing</h3>
+            <p>SEO is the only solution for success of any website. The customers will be catered with extensive services and benefits of SEO. </p>
+            <a href="#" class="btn">Learn more</a>
+        </div>
+        <div class="area-box" data-aos="zoom-in">
+            <img src="img5.jpg" alt="Secure" loading="lazy">
+            <h3>CRM</h3>
+            <p>We provide client relationship management software.A CRM system helps businesses organize, automate, and synchronize sales, marketing, customer service, and support.</p>
+            <a href="#" class="btn">Learn more</a>
+        </div>
+    </section>
+
+    <section class="faq-section" data-aos="fade-right">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <button class="faq-question">What are digital business cards?</button>
+            <div class="faq-answer">
+                <p>Digital business cards are electronic versions of traditional paper cards that can be shared online or through devices. They contain your professional and contact details in a modern, interactive format.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Can I customize my digital business card with my brand colors and logo?</button>
+            <div class="faq-answer">
+                <p>Yes, our digital cards are fully customizable to match your brand identity, including colors, logos, and fonts.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">How can I share my digital business card with others?</button>
+            <div class="faq-answer">
+                <p>You can share your card via email, messaging apps, QR codes, or even embed it on your website or social media profiles.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question"> Is there a limit to how many cards I can create?</button>
+            <div class="faq-answer">
+                <p>There is no limit. You can create as many digital cards as your business requires.</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-section">
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>We specialize in providing innovative digital solutions to streamline your business processes and enhance productivity.</p>
+            </div>
+            <!-- Navigation Links -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Email: info@yourcompany.com</li>
+                    <li>Phone: +123 456 7890</li>
+                    <li>Address: 123 Digital Lane, Tech City</li>
+                </ul>
+            </div>
+            <!-- Social Media Icons -->
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 YourCompany. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+    <script>
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach((question) => {
+            question.addEventListener('click', function () {
+                // Toggle the corresponding answer
+                const answer = this.nextElementSibling;
+                
+                // If the answer is already visible, hide it, otherwise show it
+                if (answer.style.display === "block") {
+                    answer.style.display = "none";
+                } else {
+                    answer.style.display = "block";
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>
